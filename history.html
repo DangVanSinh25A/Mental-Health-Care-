@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of chat with chatGPT</title>
+    <style>
+        .chat-content{
+
+            margin:20px 10px;
+        }
+        .chat-details{
+            display: flex;
+        }
+        .chat-details img {
+            width:60px;
+            height:60px;
+            margin-right: 14px;
+        }
+        .material-symbols-rounded {
+            display: none;
+        }
+    </style>
+</head>
+<body onload="display()">
+    
+    <h1>history chat of user</h1>
+    <div id="display_conversiton1" class="display_conversiton"></div>
+    <script>
+        function display() {
+        const defaultText = `<div class="default-text">
+            <h1>Chat with chatGPT</h1>
+            <p>Start a conversation and explore the power of AI.<br> Your chat history will be displayed here.</p>
+        </div>`
+
+        document.getElementById("display_conversiton1").innerHTML = localStorage.getItem("all-chats") || defaultText;
+        }
+    </script>
+</body>
+</html>
